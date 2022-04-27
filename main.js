@@ -1,5 +1,19 @@
 import './style.css'
 
+const swiper = new Swiper('.swiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 90,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+})
+
 const menu = document.querySelector('.menu')
 const navbar = document.querySelector('.navbar')
 
@@ -36,3 +50,4 @@ video.addEventListener('timeupdate', () => {
     video.style.opacity = '.3'
   }
 })
+
